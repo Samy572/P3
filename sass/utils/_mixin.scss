@@ -1,0 +1,25 @@
+%center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+%columnArround {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+%bShadow {
+	box-shadow: 3px 3px 5px 0px rgb(211, 205, 205);
+}
+
+%hidden {
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding: 8px;
+	width: auto;
+}

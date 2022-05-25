@@ -1,0 +1,49 @@
+.iconHeart {
+	background: red;
+	z-index: 33;
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.heart {
+	width: 23px;
+	height: 23px;
+	position: absolute;
+	right: 10px;
+	top: -38px;
+	fill: white;
+	stroke: black;
+	cursor: pointer;
+
+	&:hover {
+		// fill: url(#gradient);
+		// stroke: none;
+
+		animation: backgroundheart 0.3s ease-in-out forwards;
+	}
+}
+
+@keyframes backgroundheart {
+	from {
+		stroke: black;
+		fill: white;
+	}
+	to {
+		fill: url(#gradient);
+		stroke: none;
+	}
+}
+
+.heartMenu {
+	position: absolute;
+	top: -47px;
+	right: 8px;
+}
+
+@media screen and (min-width: 600px) {
+	.heartMenu {
+		position: absolute;
+		right: -50px;
+	}
+}

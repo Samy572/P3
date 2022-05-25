@@ -1,0 +1,133 @@
+@import './base/reset';
+@import './utils/mixin';
+@import './utils/variables';
+@import './components/animationLoader';
+@import './layouts/header';
+@import './layouts/menu.scss';
+@import './components/button';
+@import './components/card';
+@import './components/heart';
+@import './components/etiquettes';
+@import './layouts/footer';
+
+body {
+	width: 100%;
+	font-family: $fontsRoboto;
+	@extend %center;
+	flex-direction: column;
+	overflow-x: hidden;
+}
+
+// Partie accueil
+
+.location {
+	box-shadow: 0px 0px 5px 1px #949393;
+	@extend %center;
+	width: 100%;
+	height: 50px;
+	background-color: rgb(218, 216, 216);
+
+	i {
+		margin-right: 15px;
+	}
+}
+
+.home {
+	width: 100%;
+	text-align: center;
+	background-color: #e6e6e6;
+	padding-bottom: 50px;
+
+	h2 {
+		padding-top: 40px;
+		font-size: 1.5em;
+		font-weight: 500;
+	}
+	.p {
+		margin: 20px 0;
+		font-size: 1em;
+		font-weight: 300;
+	}
+}
+
+.containerBtnHome {
+	width: 100%;
+	background-color: #e6e6e6;
+	height: auto;
+	@extend %center;
+}
+
+.fonctionnement {
+	width: 100vw;
+	margin-top: 40px;
+	.titleFonctionnement {
+		margin: 0 0 30px 15px;
+	}
+}
+
+.containerBtn {
+	@extend %columnArround;
+	height: 220px;
+	margin: 0 10px;
+	margin-bottom: 40px;
+}
+
+.restaurants {
+	width: 100%;
+	background-color: #e6e6e6;
+	padding-bottom: 40px;
+
+	.containerRestaurants {
+		height: 1080px;
+		width: 100%;
+		@extend %columnArround;
+	}
+	.titleContainerRestaurant {
+		width: 100%;
+		padding: 30px 20px;
+	}
+}
+
+//media querries
+
+@media screen and (min-width: 600px) {
+	.containerBtn {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		justify-content: space-around;
+		flex-direction: row;
+	}
+	.containerBtn {
+		height: 80px;
+	}
+	.btnFonctionnement {
+		width: 30%;
+		font-size: 12px;
+
+		i {
+			position: absolute;
+			left: 15px;
+		}
+	}
+}
+
+.restaurants {
+	height: auto;
+	@extend %center;
+	.containerRestaurants {
+		height: auto;
+		flex-direction: row;
+		flex-wrap: wrap;
+		.cardRestaurant {
+			max-width: 350px;
+		}
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.restaurants {
+		height: auto;
+		display: grid;
+	}
+}

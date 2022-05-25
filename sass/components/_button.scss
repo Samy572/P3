@@ -1,0 +1,48 @@
+.btnHome {
+	height: 50px;
+	width: 200px;
+	background: linear-gradient(to left top, $primaryColor, $secondaryColor);
+	border: none;
+	padding-left: 0;
+	cursor: pointer;
+	@extend %center;
+	border-radius: 25px;
+	@extend %bShadow;
+	a {
+		color: white;
+		text-decoration: none;
+	}
+}
+
+.btnFonctionnement {
+	position: relative;
+	height: 50px;
+	width: 90%;
+	@extend %center;
+	background-color: rgb(235, 232, 232);
+	font-size: 14px;
+	border-radius: 20px;
+	@extend %bShadow;
+	border-radius: 20px;
+	transition: background-color 0.5s;
+
+	&:hover {
+		background-color: rgb(243, 243, 243);
+		cursor: pointer;
+	}
+	.number {
+		position: absolute;
+		font-size: 12px;
+		left: -5px;
+		padding: 2px 4px;
+		background-color: $primaryColor;
+		border-radius: 50%;
+		color: white;
+	}
+	i {
+		position: absolute;
+		left: 25px;
+		width: 22px;
+		color: rgb(121, 117, 117);
+	}
+}

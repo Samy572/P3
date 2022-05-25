@@ -1,0 +1,114 @@
+// Etiquettes
+
+.etiquettes {
+	width: 100%;
+	border-radius: 15px;
+	background-color: white;
+	display: flex;
+	height: 70px;
+	cursor: pointer;
+	@extend %bShadow;
+	margin-bottom: 15px;
+	overflow: hidden;
+
+	.descriptionMenu {
+		height: 100%;
+		@extend %hidden;
+	}
+
+	h4 {
+		@extend %hidden;
+	}
+	p {
+		font-size: 14px;
+		line-height: 0;
+		@extend %hidden;
+	}
+	.euro {
+		font-weight: 900;
+		margin-left: auto;
+		align-self: flex-end;
+		padding-bottom: 15px;
+		padding-right: 10px;
+	}
+	.validate {
+		@extend %center;
+		background-color: $tertiaryColor;
+		border-radius: 0px 15px 15px 0;
+		width: 0;
+		overflow: hidden;
+		transition: 0.5s all;
+	}
+	.circle {
+		transform: rotate(360deg);
+		width: 20px;
+		height: 20px;
+		background-color: white;
+		border-radius: 50%;
+		@extend %center;
+		i {
+			color: $tertiaryColor;
+			font-weight: bold;
+			font-size: 12px;
+		}
+	}
+}
+
+.etiquettes {
+	&:hover .validate {
+		animation: check 0.5s forwards;
+		width: 80px;
+		transition: 0.5s all;
+	}
+	&:hover .circle {
+		animation: spin 0.6s forwards;
+	}
+}
+
+@keyframes check {
+	from {
+		transform: translateX(50px);
+	}
+	to {
+		transform: translateX(0);
+		max-width: 50px;
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(-360deg);
+	}
+	to {
+		transform: rotate(0deg);
+	}
+}
+
+//Animation fade
+
+.entrees {
+	opacity: 0;
+	animation: fade 3s ease forwards;
+	animation-delay: 0.5s;
+}
+
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(-7px);
+	}
+}
+
+.plats {
+	@extend .entrees;
+	animation-delay: 1s;
+}
+
+.desserts {
+	@extend .entrees;
+	animation-delay: 1.5s;
+}
