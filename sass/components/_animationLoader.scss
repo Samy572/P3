@@ -21,20 +21,13 @@
 		position: relative;
 
 		.firstSpinner {
-			height: 70px;
-			width: 70px;
-			border-radius: 50%;
-			background-color: transparent;
+			position: absolute;
+			@extend %spinnerLoader;
 			border-top: 10px solid $primaryColor;
 			animation: firstSpin 2.5s forwards;
 		}
 		.secondSpinner {
-			position: absolute;
-			top: 30px;
-			height: 70px;
-			width: 70px;
-			border-radius: 50%;
-			background-color: transparent;
+			@extend %spinnerLoader;
 			border-bottom: 10px solid $tertiaryColor;
 			animation: secondSpin 2.5s forwards;
 		}

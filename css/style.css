@@ -26,6 +26,13 @@
   padding: 8px;
   width: auto; }
 
+.loader .spinnerContainer .firstSpinner, .loader .spinnerContainer .secondSpinner {
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: transparent; }
+
 .loader {
   position: fixed;
   height: 100vh;
@@ -42,19 +49,10 @@
     background-color: transparent;
     position: relative; }
     .loader .spinnerContainer .firstSpinner {
-      height: 70px;
-      width: 70px;
-      border-radius: 50%;
-      background-color: transparent;
+      position: absolute;
       border-top: 10px solid #9356dc;
       animation: firstSpin 2.5s forwards; }
     .loader .spinnerContainer .secondSpinner {
-      position: absolute;
-      top: 30px;
-      height: 70px;
-      width: 70px;
-      border-radius: 50%;
-      background-color: transparent;
       border-bottom: 10px solid #99E2D0;
       animation: secondSpin 2.5s forwards; }
 
