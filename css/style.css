@@ -183,7 +183,10 @@ header {
   border: none;
   padding-left: 0;
   cursor: pointer;
-  border-radius: 25px; }
+  border-radius: 25px;
+  transition: 0.5s; }
+  .btnHome:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
   .btnHome a {
     color: white;
     text-decoration: none; }
@@ -253,8 +256,6 @@ header {
     right: 10px; }
 
 .iconHeart {
-  background: red;
-  z-index: 33;
   position: relative;
   height: 100%;
   width: 100%; }
