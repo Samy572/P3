@@ -199,10 +199,15 @@ header {
   font-size: 14px;
   border-radius: 20px;
   border-radius: 20px;
-  transition: background-color 0.5s; }
+  transition: all 0.5s; }
   .btnFonctionnement:hover {
-    background-color: #f3f3f3;
-    cursor: pointer; }
+    cursor: pointer;
+    background-color: rgba(147, 86, 220, 0.4);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-weight: bold; }
+    .btnFonctionnement:hover i {
+      color: #9356dc;
+      font-weight: bold; }
   .btnFonctionnement .number {
     position: absolute;
     font-size: 12px;
